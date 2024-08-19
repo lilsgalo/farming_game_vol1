@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfv4y33vcpldx"]
+
+[ext_resource type="Script" path="res://assets/ui/tiny_swords_ui/inventory/Item.gd" id="1_0dsik"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_varh2"]
+
+[node name="Item" type="Sprite2D"]
+top_level = true
+texture = SubResource("CompressedTexture2D_varh2")
+centered = false
+script = ExtResource("1_0dsik")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset = Vector2(33, 0)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.680421, 1, 0.358267, 1)
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 2
+vertical_alignment = 2

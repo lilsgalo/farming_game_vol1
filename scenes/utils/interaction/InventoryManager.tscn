@@ -1,0 +1,128 @@
+[gd_scene load_steps=10 format=4 uid="uid://ctrtikot0h7up"]
+
+[ext_resource type="Script" path="res://scenes/utils/interaction/InventoryManager.gd" id="1_bhdwq"]
+[ext_resource type="Texture2D" uid="uid://cifqjsu0td0yx" path="res://assets/ui/tiny_swords_ui/Pointers/06.png" id="2_2wt18"]
+[ext_resource type="Texture2D" uid="uid://bx45t15ycnoh1" path="res://assets/ui/tiny_swords_ui/Banners/Banner_Horizontal.png" id="2_t4cni"]
+[ext_resource type="Texture2D" uid="uid://cr0hulgrij6ha" path="res://assets/ui/tiny_swords_ui/Banners/Carved_Regular.png" id="3_wgvp5"]
+[ext_resource type="PackedScene" uid="uid://dfv4y33vcpldx" path="res://assets/ui/tiny_swords_ui/inventory/Item.tscn" id="4_6gx75"]
+[ext_resource type="Script" path="res://scenes/utils/interaction/Pointer.gd" id="4_b4gj4"]
+[ext_resource type="Texture2D" uid="uid://dbsm663x7l782" path="res://assets/ui/tiny_swords_ui/Pointers/02.png" id="4_yqejf"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7rlg7"]
+resource_name = "banner"
+texture = ExtResource("2_t4cni")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/top_right_corner = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/top_left_corner = 0
+1:1/0/terrains_peering_bit/top_right_corner = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/top_left_corner = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+
+[sub_resource type="TileSet" id="TileSet_gfqv6"]
+tile_size = Vector2i(64, 64)
+terrain_set_0/mode = 1
+terrain_set_0/terrain_0/name = "banner"
+terrain_set_0/terrain_0/color = Color(0.702167, 9.14484e-07, 0.359181, 1)
+sources/0 = SubResource("TileSetAtlasSource_7rlg7")
+
+[node name="InventoryManager" type="Node2D"]
+top_level = true
+script = ExtResource("1_bhdwq")
+
+[node name="Label" type="Label" parent="."]
+offset_top = 1.0
+offset_right = 1024.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+
+[node name="Pointer" type="Sprite2D" parent="." node_paths=PackedStringArray("hotbar", "label")]
+top_level = true
+position = Vector2(415, 0)
+rotation = 0.764175
+texture = ExtResource("2_2wt18")
+centered = false
+script = ExtResource("4_b4gj4")
+hotbar = NodePath("../Hotbar")
+label = NodePath("../Label")
+
+[node name="Pointer2" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.343319, 0.536756, 1, 0.6)
+top_level = true
+z_index = 30
+position = Vector2(384, 64)
+texture = ExtResource("4_yqejf")
+centered = false
+
+[node name="Hotbar" type="TileMapLayer" parent="."]
+use_parent_material = true
+position = Vector2(0, -639)
+tile_map_data = PackedByteArray("AAAGAAsAAAABAAEAAAAGAAwAAAABAAIAAAAHAAsAAAABAAEAAAAHAAwAAAABAAIAAAAIAAsAAAABAAEAAAAIAAwAAAABAAIAAAAJAAsAAAABAAEAAAAJAAwAAAABAAIAAAAKAAsAAAACAAEAAAAKAAwAAAACAAIAAAAFAAoAAAAAAAAAAAAFAAsAAAAAAAEAAAAFAAwAAAAAAAIAAAAGAAoAAAABAAAAAAAHAAoAAAABAAAAAAAIAAoAAAABAAAAAAAJAAoAAAABAAAAAAAKAAoAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_gfqv6")
+
+[node name="Slots" type="Node2D" parent="Hotbar"]
+
+[node name="Slot_01" type="Sprite2D" parent="Hotbar/Slots"]
+position = Vector2(384, 704)
+texture = ExtResource("3_wgvp5")
+centered = false
+
+[node name="Item" parent="Hotbar/Slots/Slot_01" instance=ExtResource("4_6gx75")]
+position = Vector2(384, 64)
+
+[node name="Slot_02" type="Sprite2D" parent="Hotbar/Slots"]
+position = Vector2(448, 704)
+texture = ExtResource("3_wgvp5")
+centered = false
+
+[node name="Item" parent="Hotbar/Slots/Slot_02" instance=ExtResource("4_6gx75")]
+position = Vector2(448, 64)
+
+[node name="Slot_03" type="Sprite2D" parent="Hotbar/Slots"]
+position = Vector2(512, 704)
+texture = ExtResource("3_wgvp5")
+centered = false
+
+[node name="Item" parent="Hotbar/Slots/Slot_03" instance=ExtResource("4_6gx75")]
+position = Vector2(512, 65)
+
+[node name="Slot_04" type="Sprite2D" parent="Hotbar/Slots"]
+position = Vector2(576, 704)
+texture = ExtResource("3_wgvp5")
+centered = false
+
+[node name="Item" parent="Hotbar/Slots/Slot_04" instance=ExtResource("4_6gx75")]
+position = Vector2(576, 64)

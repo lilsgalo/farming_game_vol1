@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsjsxouocjoj3"]
+
+[ext_resource type="Script" path="res://scenes/environment/interactables/interactable_bush/interactable_bush.gd" id="1_ylky7"]
+[ext_resource type="Texture2D" uid="uid://hhtt55nwt3ud" path="res://assets/environment/decorations/bush_lg.png" id="2_a342j"]
+[ext_resource type="PackedScene" uid="uid://bsiijmyyhi43" path="res://scenes/utils/interaction/InteractionArea.tscn" id="3_sa6al"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u27ff"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xj4tv"]
+radius = 64.0
+
+[node name="interactable_bush" type="Area2D"]
+script = ExtResource("1_ylky7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_a342j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_u27ff")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_sa6al")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_xj4tv")

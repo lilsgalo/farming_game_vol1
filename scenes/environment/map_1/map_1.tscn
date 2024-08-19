@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv0ewnstl6i6x"]
+
+[ext_resource type="PackedScene" uid="uid://di7cek8xv1aq4" path="res://scenes/environment/map_1/tileset_map_1.tscn" id="1_5legd"]
+[ext_resource type="Script" path="res://scenes/environment/map_1/map_1.gd" id="1_otvbs"]
+[ext_resource type="PackedScene" uid="uid://dsjsxouocjoj3" path="res://scenes/environment/interactables/interactable_bush/interactable_bush.tscn" id="3_gmwdi"]
+
+[node name="map_1" type="Node2D"]
+script = ExtResource("1_otvbs")
+
+[node name="tileset_map_1" parent="." instance=ExtResource("1_5legd")]
+
+[node name="interactables" type="Node2D" parent="."]
+
+[node name="interactable_bush" parent="interactables" instance=ExtResource("3_gmwdi")]
+position = Vector2(256, 320)
+collision_layer = 16
+collision_mask = 0
+
+[connection signal="bush_searched" from="interactables/interactable_bush" to="." method="_on_bush_searched"]
