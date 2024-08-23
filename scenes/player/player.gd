@@ -1,40 +1,32 @@
 extends CharacterBody2D
 class_name Player
 
-@onready var animation_tree:AnimationTree = $AnimationTree
-var direction:Vector2 = Vector2.ZERO
+@onready var bodySprite:Sprite2D = $Body
+@onready var hairSprite:Sprite2D = $Hair
+@onready var toolSprite:Sprite2D = $Tool
 
-const speed = 275.0
-const movement_inputs = ["left", "right", "up", "down"]
+var direction:Vector2 = Vector2.ZERO
+var xDirection:int = 1
 
 func _ready():
-	animation_tree.active = true
+	pass
 
-func _process(delta):
-	update_animation_params(velocity)
-	handle_inputs()
+func _process(_delta):
+	HandleInputs()
 
-func _physics_process(delta):
-	
-	if Input.is_action_just_pressed("quit"):
-		get_tree().quit()
-	
-	move()
-
-func update_animation_params(vel:Vector2):
-	animation_tree.set("parameters/conditions/idle", vel == Vector2.ZERO)
-	animation_tree.set("parameters/conditions/is_moving",
-		vel != Vector2.ZERO && (direction.x != 0 || direction.y != 0))
-	
-	if vel != Vector2.ZERO:
-		animation_tree["parameters/idle/blend_position"] = direction
-		animation_tree["parameters/walk/blend_position"] = direction
-
-func move() -> void:
-	direction = Input.get_vector("left", "right", "up", "down").normalized()
-	velocity = direction * speed
+func _physics_process(_delta):
+	if direction.x > 0:
+		xDirection = 1
+	elif direction.x < 0:
+		xDirection = 0
+	#print(direction)
+	ChangeSpriteDirection()
 	move_and_slide()
 
-func handle_inputs() -> void:
-	if Input.is_action_just_pressed("quit"):
-		get_tree().quit()
+func ChangeSpriteDirection():
+	bodySprite.flip_h = 0 if xDirection == 1 else 1
+	hairSprite.flip_h = bodySprite.flip_h
+	toolSprite.flip_h = bodySprite.flip_h
+
+func HandleInputs() -> void:
+	direction = Input.get_vector("left", "right", "up", "down")

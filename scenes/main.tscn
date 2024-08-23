@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://crmfh764jti2g"]
+
+[ext_resource type="PackedScene" uid="uid://bv0ewnstl6i6x" path="res://scenes/environment/map_1/map_1.tscn" id="1_7tdob"]
+[ext_resource type="Script" path="res://scenes/ui/main.gd" id="1_a4nmg"]
+[ext_resource type="PackedScene" uid="uid://cft0n6gkfomvk" path="res://scenes/player/player.tscn" id="3_7nu84"]
+[ext_resource type="Script" path="res://scenes/ui/camera.gd" id="4_e41ek"]
+[ext_resource type="Script" path="res://scenes/ui/gui.gd" id="4_fhpuy"]
+[ext_resource type="PackedScene" uid="uid://dd4e3emq2xdum" path="res://scenes/ui/inventory.tscn" id="5_1boma"]
+[ext_resource type="PackedScene" uid="uid://dmc540grt7tnp" path="res://scenes/ui/hotbar.tscn" id="7_8nsmx"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_a4nmg")
+
+[node name="Map1" parent="." instance=ExtResource("1_7tdob")]
+
+[node name="Player" parent="." instance=ExtResource("3_7nu84")]
+position = Vector2(320, 320)
+scale = Vector2(4, 4)
+
+[node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
+visible = false
+zoom = Vector2(1.5, 1.5)
+script = ExtResource("4_e41ek")
+player = NodePath("../Player")
+
+[node name="GUI" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("4_fhpuy")
+
+[node name="Inventory" parent="GUI" instance=ExtResource("5_1boma")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -128.0
+offset_right = 96.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hotbar" parent="GUI" instance=ExtResource("7_8nsmx")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -78.0
+offset_right = 192.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[connection signal="Closed" from="GUI/Inventory" to="." method="_on_inventory_closed"]
+[connection signal="Opened" from="GUI/Inventory" to="." method="_on_inventory_opened"]

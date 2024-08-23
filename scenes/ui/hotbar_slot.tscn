@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwjlgegdtv0u3"]
+
+[ext_resource type="Texture2D" uid="uid://cr0hulgrij6ha" path="res://assets/ui/tiny_swords_ui/Banners/Carved_Regular.png" id="1_382ad"]
+
+[node name="HotbarSlot" type="TextureButton"]
+custom_minimum_size = Vector2(64, 64)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -18.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_382ad")
+centered = false

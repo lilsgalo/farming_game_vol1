@@ -1,5 +1,5 @@
 extends Node2D
-signal bush_searched_on_collectable()
+signal BushCollected()
 
-func _on_bush_searched(texture_path:String):
-	bush_searched_on_collectable.emit(texture_path)
+func _on_bush_collected(texturePath:String):
+	BushCollected.emit(texturePath)
