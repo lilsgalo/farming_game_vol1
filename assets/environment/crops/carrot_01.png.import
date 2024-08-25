@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2p48aah44rw8"
-path="res://.godot/imported/potato_05.png-cf0a2303ec15ef589732d0229ba719fc.ctex"
+uid="uid://dnsubisodkg75"
+path="res://.godot/imported/carrot_01.png-373b1dd4a5ab4bee31a5890bcf214d69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/crops/potato_05.png"
-dest_files=["res://.godot/imported/potato_05.png-cf0a2303ec15ef589732d0229ba719fc.ctex"]
+source_file="res://assets/environment/crops/carrot_01.png"
+dest_files=["res://.godot/imported/carrot_01.png-373b1dd4a5ab4bee31a5890bcf214d69.ctex"]
 
 [params]
 

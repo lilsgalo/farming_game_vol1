@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://t7l4c1aww5as"]
+
+[ext_resource type="Texture2D" uid="uid://bta31i6ianig3" path="res://assets/environment/crops/carrot_05.png" id="1_4qa8n"]
+
+[node name="Carrot" type="Area2D"]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4qa8n")

@@ -1,5 +1,5 @@
 extends State
-class_name PlayerDoing
+class_name PlayerInteracting
 
 @onready var stateMachine:StateMachine = self.get_parent()
 var animationPlayer:AnimationPlayer
@@ -11,6 +11,6 @@ func Enter():
 	var interactable = InteractionManager.activeAreas[0].get_parent()
 	animationPlayer.play("doing")
 	await animationPlayer.animation_finished
-	interactable.Init()
+	interactable.Collect(stateMachine.player.inventory)
 	
 	StateTransition.emit(self, "idle")

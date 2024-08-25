@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5x16rycri0em"]
+
+[ext_resource type="Texture2D" uid="uid://engbv1es506j" path="res://assets/environment/decorations/rock_sm.png" id="1_3wdrr"]
+
+[node name="Rock" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3wdrr")

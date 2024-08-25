@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
+@export var inventory:Inventory
+
 @onready var bodySprite:Sprite2D = $Body
 @onready var hairSprite:Sprite2D = $Hair
 @onready var toolSprite:Sprite2D = $Tool

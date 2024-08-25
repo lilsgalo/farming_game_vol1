@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dfv4y33vcpldx"]
 
-[ext_resource type="Script" path="res://assets/ui/tiny_swords_ui/inventory/item.gd" id="1_0dsik"]
+[ext_resource type="Script" path="res://scenes/utils/inventory/inventoryItem.gd" id="1_0dsik"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_varh2"]
 

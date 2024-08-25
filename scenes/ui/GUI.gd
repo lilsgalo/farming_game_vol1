@@ -1,16 +1,16 @@
 extends CanvasLayer
 
-@onready var inventory:Control = $Inventory
+@onready var inventoryGui:Control = $InventoryGui
 
 func _ready():
-	inventory.Close()
+	inventoryGui.Close()
 
 func _input(event):
 	if event.is_action_pressed("toggleInventory"):
-		if inventory.isOpen:
-			inventory.Close()
+		if inventoryGui.isOpen:
+			inventoryGui.Close()
 		else:
-			inventory.Open()
+			inventoryGui.Open()
 	
 	if event.is_action_pressed("reset"):
 		get_tree().reload_current_scene()

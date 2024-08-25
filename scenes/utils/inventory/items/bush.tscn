@@ -2,23 +2,18 @@
 
 [ext_resource type="Script" path="res://scenes/environment/interactables/collectables/bush/bush.gd" id="1_4w644"]
 [ext_resource type="Texture2D" uid="uid://hhtt55nwt3ud" path="res://assets/environment/decorations/bush_lg.png" id="2_lt3l4"]
+[ext_resource type="Resource" uid="uid://dvnqfnexl2yiq" path="res://scenes/utils/inventory/items/bush.tres" id="2_suw31"]
 [ext_resource type="PackedScene" uid="uid://bsiijmyyhi43" path="res://scenes/utils/interaction/interaction_area.tscn" id="3_3eft7"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_u27ff"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xj4tv"]
 radius = 64.0
 
 [node name="Bush" type="Area2D"]
 script = ExtResource("1_4w644")
+itemResource = ExtResource("2_suw31")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_lt3l4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-scale = Vector2(2, 2)
-shape = SubResource("CircleShape2D_u27ff")
 
 [node name="InteractionArea" parent="." instance=ExtResource("3_3eft7")]
 

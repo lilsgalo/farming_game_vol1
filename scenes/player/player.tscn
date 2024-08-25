@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=3 uid="uid://cft0n6gkfomvk"]
+[gd_scene load_steps=31 format=3 uid="uid://cft0n6gkfomvk"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_pkova"]
+[ext_resource type="Resource" uid="uid://byos5r4m2udbs" path="res://scenes/utils/inventory/items/playerInventory.tres" id="2_igdx7"]
 [ext_resource type="Texture2D" uid="uid://bm18hni1af442" path="res://assets/player/idle/base_idle.png" id="6_dilg3"]
 [ext_resource type="Texture2D" uid="uid://cl0ocnjnr1i2u" path="res://assets/player/idle/tools_idle.png" id="7_bhb72"]
 [ext_resource type="Texture2D" uid="uid://cuj4k1lb55wjh" path="res://assets/player/idle/spikeyhair_idle.png" id="8_brssi"]
@@ -1870,6 +1871,7 @@ _data = {
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_mask = 14
 script = ExtResource("1_pkova")
+inventory = ExtResource("2_igdx7")
 
 [node name="Body" type="Sprite2D" parent="."]
 texture = ExtResource("6_dilg3")
@@ -1901,9 +1903,8 @@ libraries = {
 }
 speed_scale = 0.5
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initialState", "player")]
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("17_ww0ly")
-initialState = NodePath("Idle")
 player = NodePath("..")
 
 [node name="Idle" type="Node" parent="StateMachine"]
@@ -1912,7 +1913,7 @@ script = ExtResource("17_2377p")
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("19_v6nla")
 
-[node name="Doing" type="Node" parent="StateMachine"]
+[node name="Interact" type="Node" parent="StateMachine"]
 script = ExtResource("20_ufymc")
 
 [node name="Dig" type="Node" parent="StateMachine"]

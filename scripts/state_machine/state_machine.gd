@@ -1,8 +1,8 @@
 extends Node
 class_name StateMachine
 
-@export var initialState:State
 @export var player:Player
+@onready var initialState:State = $Idle
 var states:Dictionary
 var currentState:State
 
@@ -26,7 +26,6 @@ func ChangeState(changingState:State, newStateName:String):
 			+ changingState.name + "' to '" + newStateName + "'.")
 		return
 	
-	#print("states: ", states)
 	var newState = states.get(newStateName.to_lower())
 	if !newState:
 		print("New state is empty.")

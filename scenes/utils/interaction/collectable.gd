@@ -1,12 +1,7 @@
 extends Area2D
 class_name Collectable
-signal Collected()
 
-@onready var interactionArea:InteractionArea = $InteractionArea 
+@export var itemResource: InventoryItem
 
-func Init():
-	interactionArea.Interact = Callable(self, "Interaction")
-	Interaction()
-
-func Interaction():
-	Collected.emit()
+func Collect(inventory:Inventory):
+	inventory.AddItem(itemResource)

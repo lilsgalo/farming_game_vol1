@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l1bov7n5gmnq"
-path="res://.godot/imported/sunflower_05.png-f79741d53e340ecbfdcff7022938966d.ctex"
+uid="uid://bxwx78vfn1m5o"
+path="res://.godot/imported/carrot_04.png-eeebf988810a0f72848f45d2c065b70d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/crops/sunflower_05.png"
-dest_files=["res://.godot/imported/sunflower_05.png-f79741d53e340ecbfdcff7022938966d.ctex"]
+source_file="res://assets/environment/crops/carrot_04.png"
+dest_files=["res://.godot/imported/carrot_04.png-eeebf988810a0f72848f45d2c065b70d.ctex"]
 
 [params]
 

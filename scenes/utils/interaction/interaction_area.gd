@@ -6,6 +6,10 @@ class_name InteractionArea
 var Interact: Callable = func ():
 	pass
 
+func _ready():
+	#print(InteractionManager)
+	pass
+
 func _on_body_entered(_body):
 	InteractionManager.RegisterArea(self)
 

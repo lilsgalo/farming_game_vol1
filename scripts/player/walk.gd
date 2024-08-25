@@ -5,7 +5,7 @@ class_name PlayerWalk
 var animationPlayer:AnimationPlayer
 var player:Player
 var direction:Vector2 = Vector2.ZERO
-var speed = 120.0
+var speed = 85.0
 
 func _ready():
 	player = stateMachine.player

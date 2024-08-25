@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://dmc540grt7tnp"]
 
 [ext_resource type="Texture2D" uid="uid://bnya8k7gbevfo" path="res://assets/ui/tiny_swords_ui/Banners/Carved_3Slides.png" id="1_crnj7"]
-[ext_resource type="PackedScene" uid="uid://cwjlgegdtv0u3" path="res://scenes/ui/hotbar_slot.tscn" id="2_tfolo"]
+[ext_resource type="PackedScene" uid="uid://in6ovw6mij6p" path="res://scenes/utils/inventory/hotbarSlot.tscn" id="2_osa5s"]
 
-[node name="Hotbar" type="Control"]
+[node name="HotbarGui" type="Control"]
 custom_minimum_size = Vector2(384, 78)
 layout_mode = 3
 anchors_preset = 0
@@ -33,17 +33,17 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="HotbarSlot" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_tfolo")]
+[node name="HotbarSlot" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_osa5s")]
 layout_mode = 2
 
-[node name="HotbarSlot_2" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_tfolo")]
+[node name="HotbarSlot_2" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_osa5s")]
 layout_mode = 2
 
-[node name="HotbarSlot_3" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_tfolo")]
+[node name="HotbarSlot_3" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_osa5s")]
 layout_mode = 2
 
-[node name="HotbarSlot_4" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_tfolo")]
+[node name="HotbarSlot_4" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_osa5s")]
 layout_mode = 2
 
-[node name="HotbarSlot_5" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_tfolo")]
+[node name="HotbarSlot_5" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_osa5s")]
 layout_mode = 2

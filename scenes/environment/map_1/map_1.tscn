@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://di7cek8xv1aq4" path="res://scenes/environment/map_1/tileset_map_1.tscn" id="1_5legd"]
 [ext_resource type="Script" path="res://scenes/environment/map_1/map_1.gd" id="1_otvbs"]
-[ext_resource type="PackedScene" uid="uid://dsjsxouocjoj3" path="res://scenes/environment/interactables/collectables/bush/bush.tscn" id="3_gmwdi"]
+[ext_resource type="PackedScene" uid="uid://dsjsxouocjoj3" path="res://scenes/utils/inventory/items/bush.tscn" id="3_gmwdi"]
 
 [node name="Map1" type="Node2D"]
 script = ExtResource("1_otvbs")
@@ -15,11 +15,7 @@ script = ExtResource("1_otvbs")
 position = Vector2(256, 312)
 
 [node name="Bush_2" parent="Interactables" instance=ExtResource("3_gmwdi")]
-position = Vector2(296, 392)
+position = Vector2(344, 416)
 
 [node name="Bush_3" parent="Interactables" instance=ExtResource("3_gmwdi")]
 position = Vector2(488, 320)
-
-[connection signal="Collected" from="Interactables/Bush" to="." method="_on_bush_collected"]
-[connection signal="Collected" from="Interactables/Bush_2" to="." method="_on_bush_collected"]
-[connection signal="Collected" from="Interactables/Bush_3" to="." method="_on_bush_collected"]
