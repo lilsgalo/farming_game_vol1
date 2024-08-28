@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://c1wjbdsre4jkd"]
 
-[ext_resource type="Script" path="res://scenes/utils/inventory/inventoryItem.gd" id="1_lir57"]
+[ext_resource type="Script" path="res://scenes/inventory/inventory/resources/InventoryItem.gd" id="1_lir57"]
 [ext_resource type="Texture2D" uid="uid://bs6u77yx7ycwi" path="res://assets/environment/crops/carrot_00.png" id="2_3nfqx"]
 
 [resource]

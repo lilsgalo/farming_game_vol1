@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bff8ghs642la2"]
 
 [ext_resource type="FontFile" uid="uid://cou1n2x6wbyit" path="res://assets/ui/tiny_swords_ui/FantasyRPGtext (size 8).ttf" id="1_g7ch2"]
-[ext_resource type="Script" path="res://scenes/utils/interaction/interaction_manager.gd" id="1_yl72w"]
+[ext_resource type="Script" path="res://scenes/interaction/interactionManager.gd" id="1_yl72w"]
 [ext_resource type="Texture2D" uid="uid://s1yi55fuv1f0" path="res://assets/ui/tiny_swords_ui/letter-buttons/blue-E.png" id="3_3vosb"]
 [ext_resource type="Texture2D" uid="uid://dd2c2i7lelp5p" path="res://assets/ui/tiny_swords_ui/letter-buttons/blue-E-pushed.png" id="4_meuxg"]
 

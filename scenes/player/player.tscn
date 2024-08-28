@@ -1,7 +1,7 @@
 [gd_scene load_steps=31 format=3 uid="uid://cft0n6gkfomvk"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_pkova"]
-[ext_resource type="Resource" uid="uid://byos5r4m2udbs" path="res://scenes/utils/inventory/items/playerInventory.tres" id="2_igdx7"]
+[ext_resource type="Resource" uid="uid://byos5r4m2udbs" path="res://scenes/inventory/PlayerInventory.tres" id="2_igdx7"]
 [ext_resource type="Texture2D" uid="uid://bm18hni1af442" path="res://assets/player/idle/base_idle.png" id="6_dilg3"]
 [ext_resource type="Texture2D" uid="uid://cl0ocnjnr1i2u" path="res://assets/player/idle/tools_idle.png" id="7_bhb72"]
 [ext_resource type="Texture2D" uid="uid://cuj4k1lb55wjh" path="res://assets/player/idle/spikeyhair_idle.png" id="8_brssi"]
@@ -14,14 +14,14 @@
 [ext_resource type="Texture2D" uid="uid://dbxwlifg6mp7b" path="res://assets/player/dig/base_dig.png" id="14_yjjsp"]
 [ext_resource type="Texture2D" uid="uid://c6n5d7xwadm20" path="res://assets/player/dig/spikeyhair_dig.png" id="15_omtjr"]
 [ext_resource type="Texture2D" uid="uid://cyo0q38xkkphn" path="res://assets/player/dig/tools_dig.png" id="16_rnivd"]
-[ext_resource type="Script" path="res://scripts/player/idle.gd" id="17_2377p"]
+[ext_resource type="Script" path="res://scenes/player/states/idle.gd" id="17_2377p"]
 [ext_resource type="Texture2D" uid="uid://bv70brdf7wyh7" path="res://assets/player/doing/base_doing.png" id="17_vdynf"]
 [ext_resource type="Script" path="res://scripts/state_machine/state_machine.gd" id="17_ww0ly"]
 [ext_resource type="Texture2D" uid="uid://hagqynh6xw5w" path="res://assets/player/doing/spikeyhair_doing.png" id="18_6ox4y"]
-[ext_resource type="Script" path="res://scripts/player/dig.gd" id="18_rx5am"]
+[ext_resource type="Script" path="res://scenes/player/states/dig.gd" id="18_rx5am"]
 [ext_resource type="Texture2D" uid="uid://cr1puevfb011i" path="res://assets/player/doing/tools_doing.png" id="19_s6ig8"]
-[ext_resource type="Script" path="res://scripts/player/walk.gd" id="19_v6nla"]
-[ext_resource type="Script" path="res://scripts/player/doing.gd" id="20_ufymc"]
+[ext_resource type="Script" path="res://scenes/player/states/walk.gd" id="19_v6nla"]
+[ext_resource type="Script" path="res://scenes/player/states/doing.gd" id="20_ufymc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yrlwg"]
 radius = 2.0

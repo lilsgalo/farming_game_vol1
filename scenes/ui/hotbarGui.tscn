@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmc540grt7tnp"]
+[gd_scene load_steps=4 format=3 uid="uid://dmc540grt7tnp"]
 
+[ext_resource type="Script" path="res://scenes/inventory/hotbar/hotbarGui.gd" id="1_3qjl7"]
 [ext_resource type="Texture2D" uid="uid://bnya8k7gbevfo" path="res://assets/ui/tiny_swords_ui/Banners/Carved_3Slides.png" id="1_crnj7"]
-[ext_resource type="PackedScene" uid="uid://in6ovw6mij6p" path="res://scenes/utils/inventory/hotbarSlot.tscn" id="2_osa5s"]
+[ext_resource type="PackedScene" uid="uid://in6ovw6mij6p" path="res://scenes/inventory/hotbar/hotbarSlot.tscn" id="2_osa5s"]
 
 [node name="HotbarGui" type="Control"]
 custom_minimum_size = Vector2(384, 78)
@@ -9,6 +10,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 384.0
 offset_bottom = 78.0
+script = ExtResource("1_3qjl7")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 self_modulate = Color(0.380392, 0.262745, 0.196078, 1)

@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://dsjsxouocjoj3"]
 
-[ext_resource type="Script" path="res://scenes/environment/interactables/collectables/bush/bush.gd" id="1_4w644"]
+[ext_resource type="Script" path="res://scenes/inventory/items/bush/Bush.gd" id="1_4w644"]
 [ext_resource type="Texture2D" uid="uid://hhtt55nwt3ud" path="res://assets/environment/decorations/bush_lg.png" id="2_lt3l4"]
-[ext_resource type="Resource" uid="uid://dvnqfnexl2yiq" path="res://scenes/utils/inventory/items/bush.tres" id="2_suw31"]
-[ext_resource type="PackedScene" uid="uid://bsiijmyyhi43" path="res://scenes/utils/interaction/interaction_area.tscn" id="3_3eft7"]
+[ext_resource type="Resource" uid="uid://dvnqfnexl2yiq" path="res://scenes/inventory/items/bush/Bush.tres" id="2_suw31"]
+[ext_resource type="PackedScene" uid="uid://bsiijmyyhi43" path="res://scenes/interaction/interactionArea.tscn" id="3_3eft7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xj4tv"]
 radius = 64.0

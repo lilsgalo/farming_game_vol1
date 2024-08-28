@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://htslm1iahcdn"]
+
+[ext_resource type="Script" path="res://scenes/inventory/inventory/gui/ItemPanel.gd" id="1_okmdy"]
+[ext_resource type="PackedScene" uid="uid://b7q6pstlna24h" path="res://scenes/inventory/hotbar/slotQuantityLabel.tscn" id="1_th30g"]
+
+[node name="ItemPanel" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(64, 64)
+mouse_filter = 2
+script = ExtResource("1_okmdy")
+
+[node name="Item" type="Sprite2D" parent="."]
+centered = false
+
+[node name="ItemQuantity" parent="." instance=ExtResource("1_th30g")]
+layout_mode = 1
+offset_left = -24.0
+offset_top = -36.0
+offset_right = -10.0
+offset_bottom = 0.0

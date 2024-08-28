@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b7q6pstlna24h"]
+
+[node name="ItemQuantity" type="Label"]
+custom_minimum_size = Vector2(14, 27)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -984.0
+offset_top = -740.0
+offset_right = -968.0
+offset_bottom = -704.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 2

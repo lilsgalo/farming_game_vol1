@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://in6ovw6mij6p"]
+
+[ext_resource type="Texture2D" uid="uid://cr0hulgrij6ha" path="res://assets/ui/tiny_swords_ui/Banners/Carved_Regular.png" id="1_24r7g"]
+[ext_resource type="Script" path="res://scenes/inventory/hotbar/hotbarSlotGui.gd" id="1_mic6w"]
+[ext_resource type="PackedScene" uid="uid://b7q6pstlna24h" path="res://scenes/inventory/hotbar/slotQuantityLabel.tscn" id="3_6jyoy"]
+
+[node name="HotbarSlot" type="Button" groups=["HotbarSlots"]]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(64, 64)
+offset_right = 64.0
+offset_bottom = 64.0
+script = ExtResource("1_mic6w")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_24r7g")
+centered = false
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Item" type="Sprite2D" parent="CenterContainer/Panel"]
+centered = false
+
+[node name="ItemQuantity" parent="CenterContainer/Panel" instance=ExtResource("3_6jyoy")]
+layout_mode = 1
+offset_left = -24.0
+offset_top = -36.0
+offset_right = -8.0
+offset_bottom = 0.0
