@@ -12,7 +12,7 @@ var itemInHand:ItemPanel
 
 func _ready():
 	ConnectSlots()
-	inventory.itemAdded.connect(UpdateSlots)
+	inventory.Updated.connect(UpdateSlots)
 	UpdateSlots()
 
 func _process(_delta):

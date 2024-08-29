@@ -1,7 +1,7 @@
 extends Resource
 class_name Inventory
 
-signal itemAdded()
+signal Updated()
 
 @export var slots:Array[InventorySlot]
 const MAX_INVENTORY_SLOTS:int = 15
@@ -18,7 +18,7 @@ func AddItem(newItem:InventoryItem):
 			itemInList.quantity += 1
 	
 	#print(slots)
-	itemAdded.emit()
+	Updated.emit()
 	
 
 func _addItem(newItem:InventoryItem):
@@ -44,8 +44,10 @@ func CheckItemAlreadyInList(newItem:InventoryItem) -> InventorySlot:
 
 func RemoveItemAtIndex(index:int):
 	slots[index] = InventorySlot.new()
+	Updated.emit()
 
 func InsertInSlot(index:int, inventorySlot:InventorySlot):
 	var oldIndex:int = slots.find(inventorySlot)
 	RemoveItemAtIndex(oldIndex)
 	slots[index] = inventorySlot
+	Updated.emit()

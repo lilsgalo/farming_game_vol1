@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/inventory/hotbar/hotbarGui.gd" id="1_3qjl7"]
 [ext_resource type="Texture2D" uid="uid://bnya8k7gbevfo" path="res://assets/ui/tiny_swords_ui/Banners/Carved_3Slides.png" id="1_crnj7"]
-[ext_resource type="PackedScene" uid="uid://in6ovw6mij6p" path="res://scenes/inventory/hotbar/hotbarSlot.tscn" id="2_osa5s"]
+[ext_resource type="PackedScene" uid="uid://cm0eg8qg3vw8n" path="res://scenes/inventory/hotbar/HotbarSlot.tscn" id="3_7kjnt"]
 
 [node name="HotbarGui" type="Control"]
 custom_minimum_size = Vector2(384, 78)
@@ -35,17 +35,17 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="HotbarSlot" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_osa5s")]
+[node name="Slot" parent="NinePatchRect/HBoxContainer" instance=ExtResource("3_7kjnt")]
 layout_mode = 2
 
-[node name="HotbarSlot_2" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_osa5s")]
+[node name="Slot_2" parent="NinePatchRect/HBoxContainer" instance=ExtResource("3_7kjnt")]
 layout_mode = 2
 
-[node name="HotbarSlot_3" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_osa5s")]
+[node name="Slot_3" parent="NinePatchRect/HBoxContainer" instance=ExtResource("3_7kjnt")]
 layout_mode = 2
 
-[node name="HotbarSlot_4" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_osa5s")]
+[node name="Slot_4" parent="NinePatchRect/HBoxContainer" instance=ExtResource("3_7kjnt")]
 layout_mode = 2
 
-[node name="HotbarSlot_5" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_osa5s")]
+[node name="Slot_5" parent="NinePatchRect/HBoxContainer" instance=ExtResource("3_7kjnt")]
 layout_mode = 2
