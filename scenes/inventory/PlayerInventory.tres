@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=18 format=3 uid="uid://byos5r4m2udbs"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=19 format=3 uid="uid://byos5r4m2udbs"]
 
 [ext_resource type="Script" path="res://scenes/inventory/inventory/resources/Inventory.gd" id="1_xjmro"]
 [ext_resource type="Script" path="res://scenes/inventory/inventory/resources/InventorySlot.gd" id="2_bkevk"]
+[ext_resource type="Resource" uid="uid://c1wjbdsre4jkd" path="res://scenes/inventory/items/carrot/CarrotSeed.tres" id="3_2a2uy"]
 
 [sub_resource type="Resource" id="Resource_7o1kd"]
 script = ExtResource("2_bkevk")
-quantity = 0
+item = ExtResource("3_2a2uy")
+quantity = 3
 
 [sub_resource type="Resource" id="Resource_1xpem"]
 script = ExtResource("2_bkevk")

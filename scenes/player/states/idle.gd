@@ -27,5 +27,5 @@ func HandleInputs() -> void:
 		canInteract = true
 	
 	if Input.is_action_just_pressed("useTool"):
-		#StateTransition.emit(self, "dig")
-		print("tool used")
+		StateTransition.emit(self, "water")
+		#print("tool used")

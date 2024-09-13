@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://crmfh764jti2g"]
 
 [ext_resource type="Script" path="res://scenes/ui/main.gd" id="1_84ygi"]
-[ext_resource type="PackedScene" uid="uid://bv0ewnstl6i6x" path="res://scenes/world/map_1/map_1.tscn" id="2_4x2sy"]
+[ext_resource type="PackedScene" uid="uid://bv0ewnstl6i6x" path="res://scenes/world/initial_zone/InitialZone.tscn" id="2_4x2sy"]
 [ext_resource type="PackedScene" uid="uid://cft0n6gkfomvk" path="res://scenes/player/player.tscn" id="3_cnq5h"]
 [ext_resource type="Script" path="res://scenes/ui/camera.gd" id="4_5aa6a"]
 [ext_resource type="Script" path="res://scenes/ui/gui.gd" id="5_ru6qm"]
@@ -11,10 +11,10 @@
 [node name="Main" type="Node2D"]
 script = ExtResource("1_84ygi")
 
-[node name="Map1" parent="." instance=ExtResource("2_4x2sy")]
+[node name="InitialZone" parent="." instance=ExtResource("2_4x2sy")]
 
 [node name="Player" parent="." instance=ExtResource("3_cnq5h")]
-position = Vector2(320, 320)
+position = Vector2(540, 303)
 scale = Vector2(4, 4)
 
 [node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
@@ -33,12 +33,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -192.0
-offset_top = -128.0
-offset_right = 96.0
-offset_bottom = 64.0
+offset_left = -144.0
+offset_top = -96.0
+offset_right = 144.0
+offset_bottom = 96.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1, 1)
 
 [node name="HotbarGui" parent="GUI" instance=ExtResource("7_n1mnx")]
 anchors_preset = 7
@@ -53,6 +54,5 @@ offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[connection signal="BushCollected" from="Map1" to="GUI/InventoryGui" method="_on_item_collected"]
 [connection signal="Closed" from="GUI/InventoryGui" to="." method="_on_inventory_closed"]
 [connection signal="Opened" from="GUI/InventoryGui" to="." method="_on_inventory_opened"]

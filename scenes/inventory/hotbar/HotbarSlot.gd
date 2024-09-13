@@ -10,3 +10,6 @@ func UpdateToHotbar(slot:InventorySlot):
 	itemPanel.slot = slot
 	itemPanel.Update()
 	itemPanel.visible = true
+
+func IsEmpty():
+	return !itemPanel.slot

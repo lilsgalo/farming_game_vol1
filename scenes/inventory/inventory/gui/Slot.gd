@@ -20,5 +20,8 @@ func TakeItem() -> ItemPanel:
 	itemPanel = null
 	return item
 
+func GetItem() -> ItemPanel:
+	return itemPanel
+
 func IsEmpty():
 	return !itemPanel

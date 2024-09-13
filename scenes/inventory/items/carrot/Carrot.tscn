@@ -6,4 +6,6 @@
 scale = Vector2(2, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.33333, 1.33333)
 texture = ExtResource("1_4qa8n")
+centered = false

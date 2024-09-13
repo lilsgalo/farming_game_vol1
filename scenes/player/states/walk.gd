@@ -2,15 +2,14 @@ extends State
 class_name PlayerWalk
 
 @onready var stateMachine:StateMachine = self.get_parent()
+@export var speed = 65.0
 var animationPlayer:AnimationPlayer
 var player:Player
 var direction:Vector2 = Vector2.ZERO
-var speed = 85.0
 
 func _ready():
 	player = stateMachine.player
 	animationPlayer = player.get_node("AnimationPlayer")
-	#print(stateMachine)
 
 func Enter():
 	animationPlayer.play("walk")

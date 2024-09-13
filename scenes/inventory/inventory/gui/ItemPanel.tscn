@@ -15,6 +15,6 @@ centered = false
 [node name="ItemQuantity" parent="." instance=ExtResource("1_th30g")]
 layout_mode = 1
 offset_left = -24.0
-offset_top = -36.0
+offset_top = -41.0
 offset_right = -10.0
-offset_bottom = 0.0
+offset_bottom = -5.0

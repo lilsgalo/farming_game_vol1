@@ -3,12 +3,15 @@ class_name Player
 
 @export var inventory:Inventory
 
+@onready var ap:AnimationPlayer = $AnimationPlayer
 @onready var bodySprite:Sprite2D = $Body
 @onready var hairSprite:Sprite2D = $Hair
 @onready var toolSprite:Sprite2D = $Tool
 
 var direction:Vector2 = Vector2.ZERO
 var xDirection:int = 1
+var movementAnimations = ["idle", "walk"]
+var actionAnimations = ["interact", "dig", "water"]
 
 func _ready():
 	pass
@@ -17,11 +20,12 @@ func _process(_delta):
 	HandleInputs()
 
 func _physics_process(_delta):
-	if direction.x > 0:
-		xDirection = 1
-	elif direction.x < 0:
-		xDirection = 0
-	#print(direction)
+	if ap.current_animation in movementAnimations:
+		if direction.x > 0:
+			xDirection = 1
+		elif direction.x < 0:
+			xDirection = 0
+	
 	ChangeSpriteDirection()
 	move_and_slide()
 

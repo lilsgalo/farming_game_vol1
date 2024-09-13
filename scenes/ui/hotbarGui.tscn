@@ -1,8 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmc540grt7tnp"]
+[gd_scene load_steps=8 format=3 uid="uid://dmc540grt7tnp"]
 
 [ext_resource type="Script" path="res://scenes/inventory/hotbar/hotbarGui.gd" id="1_3qjl7"]
 [ext_resource type="Texture2D" uid="uid://bnya8k7gbevfo" path="res://assets/ui/tiny_swords_ui/Banners/Carved_3Slides.png" id="1_crnj7"]
 [ext_resource type="PackedScene" uid="uid://cm0eg8qg3vw8n" path="res://scenes/inventory/hotbar/HotbarSlot.tscn" id="3_7kjnt"]
+[ext_resource type="Texture2D" uid="uid://b6wl20f5x6hra" path="res://assets/ui/selector/UI_Flat_Select_01a1.png" id="4_ujjdc"]
+[ext_resource type="Texture2D" uid="uid://b8s3xgbln3f36" path="res://assets/ui/selector/UI_Flat_Select_01a2.png" id="5_0revm"]
+[ext_resource type="Script" path="res://scenes/inventory/hotbar/HotbarSelector.gd" id="6_bwmnv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uo680"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ujjdc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0revm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="HotbarGui" type="Control"]
 custom_minimum_size = Vector2(384, 78)
@@ -49,3 +66,10 @@ layout_mode = 2
 
 [node name="Slot_5" parent="NinePatchRect/HBoxContainer" instance=ExtResource("3_7kjnt")]
 layout_mode = 2
+
+[node name="HotbarSelector" type="AnimatedSprite2D" parent="NinePatchRect"]
+position = Vector2(24, 7)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_uo680")
+centered = false
+script = ExtResource("6_bwmnv")
